@@ -10,6 +10,9 @@ repo = 'scrooloose/nerdtree'
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+[[plugins]] # alignment
+repo = 'junegunn/vim-easy-align'
+
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'
 on_ft = 'toml'

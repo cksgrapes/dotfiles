@@ -6,9 +6,9 @@ augroup END
 " dein setting
 
 " XDG_CACHE_HOME対応
-let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
+let s:cache_home    = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 " プラグインが実際にインストールされるディレクトリ
-let s:dein_dir = s:cache_home . '/dein'
+let s:dein_dir      = s:cache_home . '/dein'
 " dein.vim本体
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
@@ -25,8 +25,8 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
   " プラグインリストを収めたTOMLファイル
-  let g:rc_dir = expand('~/.vim/rc')
-  let s:toml = g:rc_dir . '/dein.toml'
+  let g:rc_dir    = expand('~/.vim/rc')
+  let s:toml      = g:rc_dir . '/dein.toml'
   let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
   " TOMLを読み込みキャッシュしておく
@@ -129,6 +129,9 @@ inoremap 「 「」<left>
 inoremap （ （）<left>
 inoremap ・・ ……
 inoremap  ーー ――
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " 変数設定
 
