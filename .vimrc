@@ -1,3 +1,6 @@
+filetype off
+filetype plugin indent off
+
 " reset augroup
 augroup MyAutoCmd
   autocmd!
@@ -23,6 +26,9 @@ endif
 " 設定開始
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
+
+  " vimproc
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
   " プラグインリストを収めたTOMLファイル
   let g:rc_dir    = expand('~/.vim/rc')
@@ -129,6 +135,8 @@ inoremap 「 「」<left>
 inoremap （ （）<left>
 inoremap ・・ ……
 inoremap  ーー ――
+inoremap ' ''<left>
+inoremap " ""<left>
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
@@ -136,3 +144,8 @@ nmap ga <Plug>(EasyAlign)
 " 変数設定
 
 let g:neocomplete#enable_at_startup = 1
+
+filetype plugin indent on
+
+:source $VIMRUNTIME/macros/matchit.vim
+:let b:match_words = '<\(\k\+\)>:</\1>'

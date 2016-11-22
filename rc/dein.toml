@@ -2,6 +2,9 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'Shougo/vimshell.vim'
+
+[[plugins]]
 repo = 'Shougo/unite.vim'
 
 [[plugins]] #ファイルツリー表示
@@ -12,6 +15,15 @@ repo = 'tpope/vim-surround'
 
 [[plugins]] # alignment
 repo = 'junegunn/vim-easy-align'
+
+[[plugins]] # git
+repo = 'tpope/vim-fugitive'
+
+[[plugins]] # git（Unite拡張？）
+repo = 'kmnk/vim-unite-giti'
+
+[[plugins]] # match
+repo = 'tmhedberg/matchit'
 
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'
