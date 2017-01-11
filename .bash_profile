@@ -8,6 +8,10 @@ export PATH="/usr/local/sbin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 function git_diff_archive() 
 {
   local diff=""
